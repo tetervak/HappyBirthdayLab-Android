@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BirthdayGreetingWithText(receiver: String, sender: String) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column {
         Text(
             text = stringResource(R.string.birthday_message, receiver),
             fontSize = 28.sp,
