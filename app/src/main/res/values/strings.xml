@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Happy Birthday Lab</string>
+    <string name="birthday_message">Happy Birthday %s!</string>
+    <string name="from_message"> - from %s</string>
+    <string name="sender_name">Alex</string>
+    <string name="receiver_name">Sheridan</string>
+</resources>
