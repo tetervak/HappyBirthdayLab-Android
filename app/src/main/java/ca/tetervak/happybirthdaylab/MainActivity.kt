@@ -87,7 +87,7 @@ fun BirthdayCardWithImage(receiver: String, sender: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun BirthdayGreetingWithImagePreview() {
+fun HappyBirthdayPagePreview() {
     HappyBirthdayLabTheme {
         HappyBirthdayPage()
     }
