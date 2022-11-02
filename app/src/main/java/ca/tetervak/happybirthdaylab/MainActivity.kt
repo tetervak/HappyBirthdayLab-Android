@@ -30,10 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    BirthdayGreetingWithImage(
-                        receiver = stringResource(R.string.receiver_name),
-                        sender = stringResource(R.string.sender_name)
-                    )
+                    HappyBirthdayPage()
                 }
             }
         }
@@ -41,7 +38,15 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun BirthdayGreetingWithText(receiver: String, sender: String) {
+private fun HappyBirthdayPage() {
+    BirthdayCardWithImage(
+        receiver = stringResource(R.string.receiver_name),
+        sender = stringResource(R.string.sender_name)
+    )
+}
+
+@Composable
+fun BirthdayCardWithText(receiver: String, sender: String) {
     Column {
         Text(
             text = stringResource(R.string.birthday_message, receiver),
@@ -66,16 +71,16 @@ fun BirthdayGreetingWithText(receiver: String, sender: String) {
 }
 
 @Composable
-fun BirthdayGreetingWithImage(receiver: String, sender: String){
+fun BirthdayCardWithImage(receiver: String, sender: String) {
     val image = painterResource(R.drawable.androidparty)
-    Box{
+    Box {
         Image(
             painter = image,
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        BirthdayGreetingWithText(receiver, sender)
+        BirthdayCardWithText(receiver, sender)
     }
 
 }
@@ -84,9 +89,6 @@ fun BirthdayGreetingWithImage(receiver: String, sender: String){
 @Composable
 fun BirthdayGreetingWithImagePreview() {
     HappyBirthdayLabTheme {
-        BirthdayGreetingWithImage(
-            receiver = stringResource(R.string.receiver_name),
-            sender = stringResource(R.string.sender_name)
-        )
+        HappyBirthdayPage()
     }
 }
